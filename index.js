@@ -16,8 +16,22 @@ app.get('/atlassian', (req, res) => {
   });
 });
 
+app.get('/atlassian/repos', (req, res) => {
+  fs.readFile('./json/atlassian_repos.json', (err, json) => {
+    let obj = JSON.parse(json);
+    res.json(obj);
+  });
+});
+
 app.get('/canonical', (req, res) => {
   fs.readFile('./json/canonical.json', (err, json) => {
+    let obj = JSON.parse(json);
+    res.json(obj);
+  });
+});
+
+app.get('/canonical/repos', (req, res) => {
+  fs.readFile('./json/canonical_repos.json', (err, json) => {
     let obj = JSON.parse(json);
     res.json(obj);
   });
@@ -30,6 +44,13 @@ app.get('/microsoft', (req, res) => {
   });
 });
 
+app.get('/microsoft/repos', (req, res) => {
+  fs.readFile('./json/microsoft_repos.json', (err, json) => {
+    let obj = JSON.parse(json);
+    res.json(obj);
+  });
+});
+
 app.get('/oracle', (req, res) => {
   fs.readFile('./json/oracle.json', (err, json) => {
     let obj = JSON.parse(json);
@@ -37,8 +58,22 @@ app.get('/oracle', (req, res) => {
   });
 });
 
+app.get('/oracle/repos', (req, res) => {
+  fs.readFile('./json/oracle_repos.json', (err, json) => {
+    let obj = JSON.parse(json);
+    res.json(obj);
+  });
+});
+
 app.get('/robert-koch-institut', (req, res) => {
   fs.readFile('./json/robert-koch-institut.json', (err, json) => {
+    let obj = JSON.parse(json);
+    res.json(obj);
+  });
+});
+
+app.get('/robert-koch-institut/repos', (req, res) => {
+  fs.readFile('./json/robert-koch-institut_repos.json', (err, json) => {
     let obj = JSON.parse(json);
     res.json(obj);
   });
