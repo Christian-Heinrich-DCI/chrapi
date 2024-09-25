@@ -6,7 +6,7 @@ dotenv.config();
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Ihr braucht noch /<Org>');
+  res.send('Ihr braucht noch /&lt;Org&gt;');
 });
 
 app.get('/atlassian', (req, res) => {
